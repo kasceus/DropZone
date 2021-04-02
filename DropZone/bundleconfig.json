@@ -1,0 +1,8 @@
+[
+	{
+		"outputFileName": "Scripts/DropZone/DropZone.min.js",
+		"inputFiles": [
+			"Scripts/DropZone/DropZone.js"
+		]
+	}
+]

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>8.0</LangVersion>
+		<TargetFrameworks>net472;net48;net462;</TargetFrameworks>
+		<AssemblyName>WDS.DropZone</AssemblyName>
+		<Version>1.0.1.5</Version>
+		<Product>Authentication</Product>
+		<Authors>Charles Graham</Authors>
+		<Company>30th Signal BN/ US Army</Company>
+		<Description>Javascript library that is used for creating a drag and drop area for inputs fields for uploading files.</Description>
+		<NeutralLanguage>"en-US"</NeutralLanguage>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<SignAssembly>false</SignAssembly>
+	</PropertyGroup>
+	<ItemGroup>
+		<Content Include="Scripts\DropZone\DropZone.js">
+			<CopyToOutputDirectory>true</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Scripts\DropZone\DropZone.min.js">
+			<CopyToOutputDirectory>true</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+</Project>

@@ -587,9 +587,9 @@
 					target = target.parentElement;
 					noColor = getComputedStyle(target).backgroundColor.replace(/\s+/g, '').match(/(rgba\(0,0,0,0\))|(rgb\(0,0,0\))/g);
 				}
-			} catch {//will fail if it gets up to the document tag
+			} catch (e) {
 				noColor = false;
-			}
+			};
 			var backgColor = getComputedStyle(target).backgroundColor;
 			var textColor = getComputedStyle(target).color;
 			if (!backgColor || noColor) {

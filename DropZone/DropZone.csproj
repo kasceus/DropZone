@@ -17,8 +17,5 @@
 		<Content Include="Scripts\DropZone\DropZone.js">
 			<CopyToOutputDirectory>true</CopyToOutputDirectory>
 		</Content>
-		<Content Include="Scripts\DropZone\DropZone.min.js">
-			<CopyToOutputDirectory>true</CopyToOutputDirectory>
-		</Content>
 	</ItemGroup>
 </Project>

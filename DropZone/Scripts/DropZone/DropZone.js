@@ -522,10 +522,6 @@
 			});
 			this.filesForUpload.items.add(file);
 		}
-		/**
-		 * Handle the files that were uplaoded
-		 * @param {any} files -files that were uploaded
-		 */
 		handleFiles(files) {
 			this.reset(true);
 			if (this.settings.allowMultiple) {
@@ -586,16 +582,20 @@
 			} else { return; }
 			let target = this.inputRef;
 			var noColor = getComputedStyle(target).backgroundColor.replace(/\s+/g, '').match(/(rgba\(0,0,0,0\))|(rgb\(0,0,0\))/g);
-			while (noColor) {
-				target = target.parentElement;
-				noColor = getComputedStyle(target).backgroundColor.replace(/\s+/g, '').match(/(rgba\(0,0,0,0\))|(rgb\(0,0,0\))/g);
+			try {
+				while (noColor) {
+					target = target.parentElement;
+					noColor = getComputedStyle(target).backgroundColor.replace(/\s+/g, '').match(/(rgba\(0,0,0,0\))|(rgb\(0,0,0\))/g);
+				}
+			} catch {//will fail if it gets up to the document tag
+				noColor = false;
 			}
 			var backgColor = getComputedStyle(target).backgroundColor;
 			var textColor = getComputedStyle(target).color;
-			if (!backgColor) {
+			if (!backgColor || noColor) {
 				backgColor = "rgba(220,220,220,1)";
 			}
-			if (!textColor) {
+			if (!textColor || noColor) {
 				textColor = "rgba(33,33,33,1)";
 			}
 			let css = `.drop-zone{width:100%;height:100px; background-color:${this.whiteShift(backgColor, 10, .8)};padding:5px; min-width:200px; min-height:100px; padding:5px}
@@ -664,4 +664,3 @@
 		this.querySelectorAll('input[type="file"]').forEach((x) => new DropZone(x, settings));
 	};
 })();
-//# sourceMappingURL=DropZone.js.map

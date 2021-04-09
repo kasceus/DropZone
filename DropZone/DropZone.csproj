@@ -4,7 +4,7 @@
 		<LangVersion>8.0</LangVersion>
 		<TargetFrameworks>net472;net48;net462;</TargetFrameworks>
 		<AssemblyName>WDS.DropZone</AssemblyName>
-		<Version>1.0.1.6</Version>
+		<Version>1.0.1.13</Version>
 		<Product>Authentication</Product>
 		<Authors>Charles Graham</Authors>
 		<Company>30th Signal BN/ US Army</Company>
@@ -14,8 +14,11 @@
 		<SignAssembly>false</SignAssembly>
 	</PropertyGroup>
 	<ItemGroup>
-		<Content Include="Scripts\DropZone\DropZone.js">
-			<CopyToOutputDirectory>true</CopyToOutputDirectory>
-		</Content>
+		<Content Include="Scripts/DropZone/*.js;Scripts/DropZone/Icons/*.png"></Content>
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Scripts" />
+		<Folder Include="Scripts/DropZone" />
+		<Folder Include="Scripts/DropZone/Icons" />
 	</ItemGroup>
 </Project>

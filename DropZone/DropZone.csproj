@@ -5,7 +5,7 @@
 		<TargetFrameworks>net472;net48;net462;</TargetFrameworks>
 		<AssemblyName>WDS.DropZone</AssemblyName>
 		<Version>1.0.1.13</Version>
-		<Product>Authentication</Product>
+		<Product>Drop Zone</Product>
 		<Authors>Charles Graham</Authors>
 		<Company>30th Signal BN/ US Army</Company>
 		<Description>Javascript library that is used for creating a drag and drop area for inputs fields for uploading files.</Description>

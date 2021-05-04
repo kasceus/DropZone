@@ -18,6 +18,7 @@ This plugin extends the HTMLInput and HTMLForm elements.  You can call it direct
 			resetOnUpload: false
 		}
 
+Some of these options are configured on the actual input field itself.  The accept attribute will override the <b>allowedFileTypes</b> setting. 
 
 ## Example
 

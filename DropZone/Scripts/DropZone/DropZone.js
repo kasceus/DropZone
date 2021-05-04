@@ -227,7 +227,7 @@
 				clickToUpload: true,
 				initClass: 'da-applied',
 				imagesOnly: true,
-				maxFiles: 1,
+				maxFiles: 5,
 				resetOnUpload: false
 			}
 		 */
